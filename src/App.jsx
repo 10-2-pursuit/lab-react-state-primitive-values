@@ -3,26 +3,29 @@ import { useState } from "react";
 import "./App.css";
 
 function App () {
-  function addToScore(){
+  const [score, setScore] = useState(0);
+  const [increment, setIncrement] = useState(1);
+  
+  
+ const addToScore = () => {
     setScore(score + increment); 
-  }
+ };
 
-  function upgradeIncrement(){
-    if(score>= 10){
+
+const upgradeIncrement =() =>{
+    if(score >= 10){
       setIncrement(increment + 1); 
       setScore(score - 10);
     }
     else{ 
       alert("You can't afford that!");
     }
-  }
-function reset() {
+  }; 
+
+const initiateReset = () => {
   setScore(0);
   setIncrement(1);
-}
-
-const [score, setScore] = useState(0);
-const [increment, setIncrement] = useState(1);
+};
 
 
     return (
@@ -38,7 +41,7 @@ const [increment, setIncrement] = useState(1);
         ): (
           <div>
             <h2>You Win</h2>
-            <button onClick={reset}>Play Again?</button>
+            <button onClick={initiateReset}>Play Again?</button>
           </div>
         )}
       </main>
