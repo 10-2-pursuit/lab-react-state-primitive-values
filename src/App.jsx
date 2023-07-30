@@ -8,7 +8,6 @@ function App() {
 
   const addScore = () => {
     setCounter((counter += increment));
-    counter > 99 ? alert("You have won!") : null;
   };
 
   const addIncrement = () => {
@@ -17,14 +16,28 @@ function App() {
       : alert("You can't afford that!");
   };
 
+  const resetGame = () => {
+    setCounter((counter = 0));
+    setIncrement((increment = 1));
+  };
+
   return (
     <main>
       <h2>Current Score: {counter}</h2>
-      <button onClick={addScore}>+{increment}</button>
-      <br />
-      <button onClick={addIncrement}>
-        Pay 10 points to change from +{increment} to +{increment + 1}
-      </button>
+      {counter < 99 ? (
+        <>
+          <button onClick={addScore}>+{increment}</button>
+          <p></p>
+          <button onClick={addIncrement}>
+            Pay 10 points to change from +{increment} to +{increment + 1}
+          </button>
+        </>
+      ) : (
+        <>
+          <h2>You have won!</h2>
+          <button onClick={resetGame}>Play again?</button>
+        </>
+      )}
     </main>
   );
 }
