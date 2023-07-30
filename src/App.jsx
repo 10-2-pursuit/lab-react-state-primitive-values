@@ -8,11 +8,13 @@ function App() {
 
   const addScore = () => {
     setCounter((counter += increment));
+    counter > 99 ? alert("You have won!") : null;
   };
 
   const addIncrement = () => {
-    setCounter(counter - 10);
-    setIncrement(increment + 1);
+    counter > 9
+      ? (setCounter(counter - 10), setIncrement(increment + 1))
+      : alert("You can't afford that!");
   };
 
   return (
@@ -21,7 +23,7 @@ function App() {
       <button onClick={addScore}>+{increment}</button>
       <br />
       <button onClick={addIncrement}>
-        Pay 10 Points To Change From +{increment} To +{increment + 1}
+        Pay 10 points to change from +{increment} to +{increment + 1}
       </button>
     </main>
   );
