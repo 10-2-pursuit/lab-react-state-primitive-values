@@ -2,20 +2,16 @@ import React from "react";
 import "./App.css";
 import { useState } from 'react'
 
-
-
-const initialState = {
-  clicks: { amount: 0 },
-  auto: { cost: 10, amount: 0 },
-};
-
 function App () {
   const [counter,setCounter] = useState(0);
+  function handleClick(){
+    setCounter(counter+10000);
+  }
     return (
       <main>
         <p>{counter} namen</p>
         <div>
-        <button onClick={counter}>Counter</button>
+        <button onClick={handleClick}>Counter</button>
         </div>
        
       </main>
