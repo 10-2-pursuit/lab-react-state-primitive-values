@@ -1,8 +1,8 @@
 import React from "react";
 import "./App.css";
+import { useState } from 'react'
 
-const x = +1
-const y = +2
+
 
 const initialState = {
   clicks: { amount: 0 },
@@ -10,9 +10,14 @@ const initialState = {
 };
 
 function App () {
+  const [counter,setCounter] = useState(0);
     return (
       <main>
-        <p>React State Lab</p>
+        <p>{counter} namen</p>
+        <div>
+        <button onClick={counter}>Counter</button>
+        </div>
+       
       </main>
     );
 }
