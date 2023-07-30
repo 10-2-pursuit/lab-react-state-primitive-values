@@ -34,6 +34,7 @@ const initiateReset = () => {
         {score <100 ? (
           <div>
             <button onClick= {addToScore}>+{increment}</button>
+            <br></br>
             <button onCLick= {upgradeIncrement}>
               Pay 10 points to change from +{increment} to +{increment + 1}
             </button>
