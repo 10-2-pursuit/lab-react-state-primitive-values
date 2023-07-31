@@ -5,7 +5,8 @@ import { useState } from 'react'
 function App () {
   const [counter,setCounter] = useState(0);
   function handleClick(){
-    setCounter(counter+10000);
+    setCounter(counter+10);
+    setCounter(counter+2);
   }
     return (
       <main>
