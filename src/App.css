@@ -1,5 +1,22 @@
-/* Your code here! */
-main {
-  margin: 25px auto;
-  width: 50%;
+
+
+.App {
+  text-align: center;
+  margin-top: 50px;
+}
+
+button {
+  font-size: 16px;
+  padding: 10px 20px;
+  margin: 10px;
+  cursor: pointer;
+  background-color: aqua;
+}
+
+h2 {
+  color: green;
+}
+
+h1 {
+  color: rgb(79, 14, 209);
 }
