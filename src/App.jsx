@@ -25,8 +25,8 @@ function App() {
 
   return (
     <div className="App">
-      <h1>Clicker Game</h1>
-      <p>Current Score : {score}</p>
+      <h2>Clicker Game</h2>
+      <h1>Current Score : {score}</h1>
       {!victory ? (
         <>
           <button onClick={handleIncrement}> + {incrementValue}</button>
