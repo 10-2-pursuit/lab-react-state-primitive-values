@@ -8,38 +8,34 @@ function App() {
 
   const handleIncrement = () => {
     setScore(score + incrementValue);
-
-    if (score + incrementValue >= 100) setVictory(true);
+    score + incrementValue >= 100 ? setVictory(true) : setVictory(false);
   };
 
-  const handlePayButtonClick = () => {
-    if (score >= 10) {
-      setScore(score - 10);
-      setIncrementValue(incrementValue + 1);
-    } else {
-      alert("You can't afford that!");
-    }
+  const handlePayBtn = () => {
+    score >= 10
+      ? (setScore(score - 10), setIncrementValue(incrementValue + 1))
+      : alert("You can't afford that!");
   };
+
   const handlePlayAgainClick = () => {
     setScore(0);
     setIncrementValue(1);
     setVictory(false);
   };
 
-
   return (
     <div className="App">
       <h1>Clicker Game</h1>
-      <p>Current Score: {score}</p>
-      {!victory && (
+      <p>Current Score : {score}</p>
+      {!victory ? (
         <>
-          <button onClick={handleIncrement}>+{incrementValue}</button>
-          <button onClick={handlePayButtonClick}>
-            Pay 10 points to change from +{incrementValue} to +{incrementValue + 1}
+          <button onClick={handleIncrement}> + {incrementValue}</button>
+          <button onClick={handlePayBtn}>
+            Pay 10 points to change from + {incrementValue} to +{" "}
+            {incrementValue + 1}{" "}
           </button>
         </>
-      )}
-      {victory && (
+      ) : (
         <>
           <h2>You Win!</h2>
           <button onClick={handlePlayAgainClick}>Play again?</button>
