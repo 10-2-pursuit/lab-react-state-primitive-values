@@ -1,11 +1,17 @@
 import React from "react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import "./App.css";
 
 function App() {
-  const [counter, scoreCounter] = useState(99);
+  const [counter, scoreCounter] = useState(0);
   const [incrementor, setIncrementor] = useState(1);
   const [gameOver, setGameOver] = useState(false);
+
+  useEffect(() => {
+    if (counter >= 100) {
+      setGameOver(true);
+    }
+  }, [counter]);
 
   const scoreTrack = () => {
     scoreCounter(counter + incrementor);
@@ -21,26 +27,27 @@ function App() {
   };
 
   const resetGame = () => {
-    setGameOver(!gameOver)
     scoreCounter(0);
     setIncrementor(1);
+    setGameOver(false)
   };
 
   return (
     <main>
       {gameOver ? (
         <div>
+          <h2 className="game-score">Current Score: {counter} </h2>
           <h2>You Win!</h2>
           <button onClick={resetGame}>Play again?</button>
         </div>
       ) : (
-        <>
+        <div>
           <h2>Current Score: {counter} </h2>
-          <button onClick={scoreTrack}> +{incrementor}</button>
-          <button onClick={upgrade}>
+          <button className="button1" onClick={scoreTrack}> +{incrementor}</button>
+          <button className="button1" onClick={upgrade}>
             Pay 10 points to change from +{incrementor} to +{incrementor + 1}
           </button>
-        </>
+        </div>
       )}
     </main>
   );
