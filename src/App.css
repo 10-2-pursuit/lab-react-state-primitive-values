@@ -1,5 +1,20 @@
-/* Your code here! */
-main {
-  margin: 25px auto;
-  width: 50%;
+.App {
+  text-align: center;
+  margin-top: 50px;
+}
+
+button {
+  font-size: 20px;
+  padding: 5px;
+  margin: 15px;
+  cursor: pointer;
+  background-color: yellow;
+}
+
+h2 {
+  color: blue;
+}
+
+h1 {
+  color: green
 }
