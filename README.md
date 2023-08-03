@@ -26,6 +26,12 @@ Build a simple clicker "game" that makes use of React, props, and state!
 
 - [MY LIVE SITE URL](https://64cbeb089d21bc06cc18740d--thriving-squirrel-360eae.netlify.app/)
 
+<!-- I am not sure why but the Netlify link is not working.  -->
+
+http://localhost:5173/
+
+
+
 ## Instructions
 
 You will be building an application that is similar to popular "clicker" games. The game has the following rules:
