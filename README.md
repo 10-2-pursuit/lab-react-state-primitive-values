@@ -24,7 +24,7 @@ Build a simple clicker "game" that makes use of React, props, and state!
 
 1. Deploy this application to Netlify and add the link to your netlify site below:
 
-- [MY LIVE SITE URL]()
+- [MY LIVE SITE URL](https://64cbeb089d21bc06cc18740d--thriving-squirrel-360eae.netlify.app/)
 
 ## Instructions
 
