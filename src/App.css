@@ -1,6 +1,13 @@
-/* Your code here! */
+
 main {
   margin: 25px auto;
   width: 50%;
+justify-content: center;
+  align-items: center;
+  background-color: aquamarine;
 }
 
+button {
+  margin: 50px; 
+  fill: #04f0b1;
+}
